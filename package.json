@@ -1,0 +1,15 @@
+{
+  "name": "trans-var-root",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@lerna-lite/cli": "^3.3.3",
+    "@lerna-lite/publish": "^3.3.3",
+    "@lerna-lite/version": "^3.3.3",
+    "conventional-changelog-conventionalcommits": "^7.0.2"
+  }
+}
