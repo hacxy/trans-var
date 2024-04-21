@@ -2,7 +2,12 @@
   "name": "trans-var-root",
   "version": "0.0.0",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "dev:lib": "pnpm -F trans-var run dev",
+    "dev:cli": "pnpm -F trans-var-cli run dev",
+    "build:lib": "pnpm -F trans-var run build",
+    "build:cli": "pnpm -F trans-var-cli run build"
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",
