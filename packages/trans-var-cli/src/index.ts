@@ -2,29 +2,32 @@
 import chalk from "chalk";
 import prompts from "prompts";
 import ora from "ora";
-
-let name = "";
-process.argv.find((arg, index, args) => {
-  if (arg === "--name") name = args[index + 1];
-});
-
+import { getVarByCiba } from "trans-var";
+import clipboardy from "clipboardy";
 const bootstrap = async () => {
-  await prompts({
-    type: name ? null : "text",
-    name: "name",
-    message: "Your name: ",
-    onState(stage) {
-      name = stage.value;
+  const promptsResult = await prompts(
+    {
+      type: "text",
+      name: "name",
+      message: "输入变量名:",
     },
-  });
+    {
+      onCancel: () => {
+        console.log(chalk.red("❌ 取消输入"));
+        process.exit(1);
+      },
+    }
+  );
 
   const spinner = ora("Loading ...").start();
+  const varText = await getVarByCiba(promptsResult.name);
 
-  setTimeout(() => {
-    spinner.succeed(
-      chalk.green(`🥳 Hello ${name}! Welcome to use the CLI Unbuild Template.`)
-    );
-  }, 1000);
+  if (varText) {
+    clipboardy.writeSync(varText);
+    spinner.succeed(varText + chalk.dim(" 已复制到剪贴板"));
+  } else {
+    spinner.fail("获取变量失败");
+  }
 };
 
 bootstrap();

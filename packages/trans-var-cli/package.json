@@ -6,7 +6,7 @@
   "license": "MIT",
   "description": "CLI application development template using unbuild as a build tool.",
   "bin": {
-    "hello-cli": "dist/index.mjs"
+    "trans-var": "dist/index.mjs"
   },
   "files": [
     "dist"
@@ -27,10 +27,11 @@
     "@types/node": "^20.12.5",
     "@types/prompts": "^2.4.9",
     "chalk": "^5.3.0",
+    "clipboardy": "^4.0.0",
     "ora": "^8.0.1",
     "prompts": "^2.4.2",
+    "trans-var": "workspace:*",
     "typescript": "^5.4.2",
-    "unbuild": "^2.0.0",
-    "trans-var": "workspace:*"
+    "unbuild": "^2.0.0"
   }
 }

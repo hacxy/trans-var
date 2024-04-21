@@ -1,26 +1,19 @@
+import { formatSmallHump } from 'tianjie';
 /**
- * @name 这是一个说hello的函数
- * @group 工具函数
- * @param name 名称
+ * @name 通过金山词霸翻译变量
+ * @param text 需要翻译的文本
  * @returns
- * @example
- * ```ts
- * console.log(sayHello('hacxy')); // Hello, hacxy!
- * ```
  */
-export const sayHello = (name: string): string => {
-  return `Hello, ${name}!`;
-};
+export const getVarByCiba = async (text: string) => {
+  const request = await fetch(`https://ciba-service.hacxy.cn?text=${text}`);
+  const result = await request.json().then((res) => res.data);
 
-/**
- * @name helloWorld
- * @group 示例函数
- * @returns
- * @example
- * ```ts
- * console.log(helloWorld()); // Hello, World!
- * ```
- */
-export const helloWorld = () => {
-  return 'Hello, World!';
+  let varText: string | undefined = result?.symbols?.[0]?.parts?.[0]?.means?.[0]?.word_mean;
+
+  if (varText) {
+    varText = varText.split(';')[0];
+    varText = varText.replace(/\[.*?\]/g, '');
+    varText = formatSmallHump(varText);
+  }
+  return varText;
 };

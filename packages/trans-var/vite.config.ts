@@ -8,7 +8,7 @@ export default defineConfig({
     lib: {
       formats: ['es', 'cjs', 'iife'],
       entry: './src/index.ts',
-      name: 'UTILS',
+      name: 'TRANS_VAR',
       fileName: 'index'
     }
   },
