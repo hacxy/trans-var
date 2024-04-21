@@ -6,7 +6,11 @@
     "dev:lib": "pnpm -F trans-var run dev",
     "dev:cli": "pnpm -F trans-var-cli run dev",
     "build:lib": "pnpm -F trans-var run build",
-    "build:cli": "pnpm -F trans-var-cli run build"
+    "build:cli": "pnpm -F trans-var-cli run build",
+    "build": "pnpm -r run build",
+    "changed": "lerna version --conventional-commits --create-release github",
+    "changed:major": "lerna version major --conventional-commits --create-release github",
+    "release": "lerna publish from-package --yes"
   },
   "keywords": [],
   "author": "",
