@@ -116,6 +116,9 @@ importers:
 
   packages/trans-var-vue:
     dependencies:
+      clipboardy:
+        specifier: ^4.0.0
+        version: 4.0.0
       vue:
         specifier: ^3.4.21
         version: 3.4.23(typescript@5.4.5)
