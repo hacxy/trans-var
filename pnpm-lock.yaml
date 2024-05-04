@@ -54,8 +54,8 @@ importers:
         specifier: ^15.5.1
         version: 15.11.0(encoding@0.1.13)
       tianjie:
-        specifier: ^0.4.2
-        version: 0.4.2
+        specifier: ^0.5.1
+        version: 0.5.1
       typedoc:
         specifier: 0.25.13
         version: 0.25.13(typescript@5.4.5)
@@ -4584,8 +4584,8 @@ packages:
   through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
 
-  tianjie@0.4.2:
-    resolution: {integrity: sha512-QgiX5XWiT5kN3KNd0UPxWgULDYvkBu6KPTsqH6IP5S0UfsrGRD2dcdbNBGKGAA9VzZKhoCbOqo2osBuBWTXsTA==}
+  tianjie@0.5.1:
+    resolution: {integrity: sha512-vbc76qvpA3f035fLVnsSCm9rW9qqhqShi1r3tYbkY7du4+gEf9b+XRqb0j2ZhXZFNy0XelMXRdUgKlYbupdCIQ==}
 
   tinybench@2.8.0:
     resolution: {integrity: sha512-1/eK7zUnIklz4JUUlL+658n58XO2hHLQfSk1Zf2LKieUjxidN16eKFEoDEfjHc3ohofSSqK3X5yO6VGb6iW8Lw==}
@@ -10066,7 +10066,7 @@ snapshots:
 
   through@2.3.8: {}
 
-  tianjie@0.4.2: {}
+  tianjie@0.5.1: {}
 
   tinybench@2.8.0: {}
 
