@@ -1,8 +1,11 @@
 {
   "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "npmClient": "pnpm",
-  "packages": ["packages/trans-var", "packages/trans-var-cli"],
+  "packages": [
+    "packages/trans-var",
+    "packages/trans-var-cli"
+  ],
   "command": {
     "version": {
       "conventionalCommits": true,
@@ -50,7 +53,9 @@
         "hidden": true
       }
     ],
-    "issuePrefixes": ["#"],
+    "issuePrefixes": [
+      "#"
+    ],
     "commitUrlFormat": "{{host}}/{{owner}}/{{repository}}/commit/{{hash}}",
     "compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
     "userUrlFormat": "{{host}}/{{user}}"
