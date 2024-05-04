@@ -28,7 +28,6 @@ jobs:
       - name: 打包项目
         run: |
           pnpm build
-          pnpm cli:build
 
       - name: 更新npmrc
         run: |
