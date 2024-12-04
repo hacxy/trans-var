@@ -37,7 +37,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           source: dist/
-          target: '/${{secrets.SSH_USERNAME}}/Projects/.tans-var_temp/'
+          target: '/${{secrets.SSH_USERNAME}}/Projects/.trans-var_temp/'
           rm: true
           strip_components: 1
 
@@ -50,5 +50,5 @@ jobs:
           script: |
             mkdir -p /${{secrets.SSH_USERNAME}}/Projects/trans-var
             rm -rf /${{secrets.SSH_USERNAME}}/Projects/trans-var/*
-            cp -rf /${{secrets.SSH_USERNAME}}/Projects/.tans-var_temp/*  /${{secrets.SSH_USERNAME}}/Projects/tans-var/
-            rm -rf /${{secrets.SSH_USERNAME}}/Projects/.tans-var_temp/
+            cp -rf /${{secrets.SSH_USERNAME}}/Projects/.trans-var_temp/*  /${{secrets.SSH_USERNAME}}/Projects/trans-var/
+            rm -rf /${{secrets.SSH_USERNAME}}/Projects/.trans-var_temp/
