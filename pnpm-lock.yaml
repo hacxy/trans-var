@@ -12,11 +12,14 @@ importers:
         specifier: ^5.5.2
         version: 5.5.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@ant-design/x':
-        specifier: ^1.0.1
-        version: 1.0.1(antd@5.22.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.0.2
+        version: 1.0.2(antd@5.22.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       antd:
         specifier: ^5.22.3
         version: 5.22.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      ky:
+        specifier: ^1.7.2
+        version: 1.7.2
       normalize.css:
         specifier: ^8.0.1
         version: 8.0.1
@@ -104,8 +107,8 @@ packages:
     peerDependencies:
       react: '>=16.9.0'
 
-  '@ant-design/x@1.0.1':
-    resolution: {integrity: sha512-yC+Eo5J1c1rW/7CtWRDOeLSbrRVvYsjDf6WZI7OsYLvwTtT0oxa/TZAxn4GISUDYg3ZHDCNgDjVdjMhTWVEK+w==}
+  '@ant-design/x@1.0.2':
+    resolution: {integrity: sha512-1fCdE14eV0ibCoA4EFLFLgjbAcwqyniX/dMPhZtpE+e8YxJvnIVLQleVKxw6Osyi12KPnQFFeiXDhkf9u03TIA==}
     peerDependencies:
       antd: '>=5.0.0'
       react: '>=18.0.0'
@@ -1585,6 +1588,10 @@ packages:
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
+  ky@1.7.2:
+    resolution: {integrity: sha512-OzIvbHKKDpi60TnF9t7UUVAF1B4mcqc02z5PIvrm08Wyb+yOcz63GRvEuVxNT18a9E1SrNouhB4W2NNLeD7Ykg==}
+    engines: {node: '>=18'}
+
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -2590,7 +2597,7 @@ snapshots:
       resize-observer-polyfill: 1.5.1
       throttle-debounce: 5.0.2
 
-  '@ant-design/x@1.0.1(antd@5.22.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@ant-design/x@1.0.2(antd@5.22.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@ant-design/colors': 7.1.0
       '@ant-design/cssinjs': 1.22.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -4308,6 +4315,8 @@ snapshots:
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
+
+  ky@1.7.2: {}
 
   levn@0.4.1:
     dependencies:
