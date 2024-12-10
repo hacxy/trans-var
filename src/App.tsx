@@ -41,7 +41,7 @@ function App() {
       <Welcome
         icon="https://mdn.alipayobjects.com/huamei_iwk9zp/afts/img/A*s5sNRo5LjfQAAAAAAAAAAAAADgCCAQ/fmt.webp"
         title="Translate Variable"
-        description="变量快捷翻译工具~"
+        description="变量名称快捷翻译工具~"
         style={{
           background: 'linear-gradient(97deg, #f2f9fe 0%, #f7f3ff 100%)',
         }}
