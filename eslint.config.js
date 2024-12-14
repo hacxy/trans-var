@@ -1,5 +1,4 @@
-import antfu from '@antfu/eslint-config'
-// import format from 'eslint-plugin-format'
+import antfu from '@antfu/eslint-config';
 
 export default antfu({
   react: true,
@@ -19,19 +18,12 @@ export default antfu({
     'style/indent': [2, 2],
     // 强制使用 unix 换行符
     'style/linebreak-style': [2, 'unix'],
+    // 要求语句末尾使用分号
+    'style/semi': [2, 'always'],
+    // 禁止不必要的括号
+    'style/no-extra-parens': 2,
+    'unused-imports/no-unused-imports': 2,
   },
   ignores: ['public/**/*'],
 },
-// format css
-// {
-//   files: ['**/*.css'],
-//   languageOptions: {
-//     parser: format.parserPlain,
-//   },
-//   plugins: {
-//     format,
-//   },
-//   rules: {
-//     'format/prettier': ['error', { parser: 'css', tabWidth: 2 }],
-//   },
-)
+);

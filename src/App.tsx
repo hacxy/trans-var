@@ -1,41 +1,41 @@
-import { OpenAIOutlined } from '@ant-design/icons'
-import { Bubble, Sender, Welcome } from '@ant-design/x'
-import { Card, Space, Spin, Typography } from 'antd'
-import { useChat } from './hooks'
-import './App.css'
+import { OpenAIOutlined } from '@ant-design/icons';
+import { Bubble, Sender, Welcome } from '@ant-design/x';
+import { Card, Space, Spin, Typography } from 'antd';
+import { useChat } from './hooks';
+import './App.css';
 
 function App() {
-  const { request, content, loading, clearContent } = useChat()
+  const { request, content, loading, clearContent } = useChat();
   const types = [
     {
       key: 'lowerCamelCase',
       title: '小驼峰(lowerCamelCase)',
       format: (value: string) => {
-        return value
+        return value;
       },
     },
     {
       key: 'upperCamelCase',
       title: '大驼峰(upperCamelCase)',
       format: (value: string) => {
-        return value.replace(/( |^)[a-z]/g, L => L.toUpperCase())
+        return value.replace(/( |^)[a-z]/g, L => L.toUpperCase());
       },
     },
     {
       key: 'lowerSnakeCase',
       title: '小写蛇形(lowerSnakeCase)',
       format: (value: string) => {
-        return value.replace(/([A-Z])/g, '_$1').toLowerCase()
+        return value.replace(/([A-Z])/g, '_$1').toLowerCase();
       },
     },
     {
       key: 'upperSnakeCase',
       title: '大写蛇形(upperSnakeCase)',
       format: (value: string) => {
-        return value.replace(/([A-Z])/g, '_$1').toUpperCase()
+        return value.replace(/([A-Z])/g, '_$1').toUpperCase();
       },
     },
-  ]
+  ];
   return (
     <>
       <Welcome
@@ -52,7 +52,7 @@ function App() {
           onSubmit={request}
           style={{ marginBottom: '10px' }}
           actions={(_, info) => {
-            const { SendButton, LoadingButton, ClearButton } = info.components
+            const { SendButton, LoadingButton, ClearButton } = info.components;
 
             return (
               <Space size="small">
@@ -76,7 +76,7 @@ function App() {
                     />
                   )}
               </Space>
-            )
+            );
           }}
         />
         <div className="var-content">
@@ -116,12 +116,12 @@ function App() {
                   )}
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </Card>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
